@@ -19,6 +19,7 @@ import {
   FcDonate,
   FcManager,
 } from 'react-icons/fc'
+import CardItem from './CardItem'
 
 interface CardProps {
   heading: string
@@ -61,51 +62,32 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
   )
 }
 
-export default function Features() {
+export default function gridListWith() {
   return (
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
         <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}>
-          Short heading
+        Algunos de nuestros servicios
         </Heading>
         <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis obcaecati ut
-          cupiditate pariatur, dignissimos, placeat amet officiis.
+          Ofrecemos servicios y productos para su cuidado personal, con la mejor calidad y los mejores precios
         </Text>
       </Stack>
 
-      <Container maxW={'5xl'} mt={12}>
+      <Container maxW={'6xl'} mt={12}>
         <Flex flexWrap="wrap" gridGap={6} justify="center">
-          <Card
-            heading={'Heading'}
-            icon={<Icon as={FcAssistant} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
-            href={'#'}
-          />
-          <Card
-            heading={'Heading'}
-            icon={<Icon as={FcCollaboration} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
-            href={'#'}
-          />
-          <Card
-            heading={'Heading'}
-            icon={<Icon as={FcDonate} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
-            href={'#'}
-          />
-          <Card
-            heading={'Heading'}
-            icon={<Icon as={FcManager} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
-            href={'#'}
-          />
-          <Card
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          
+          {/*<Card
             heading={'Heading'}
             icon={<Icon as={FcAbout} w={10} h={10} />}
             description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
             href={'#'}
-          />
+            />*/}
         </Flex>
       </Container>
     </Box>

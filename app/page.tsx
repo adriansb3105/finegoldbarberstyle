@@ -5,8 +5,10 @@ import Features from '@/components/Features'
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Features />
+      <div className="flex flex-col w-full h-screen">
+        <Hero />
+        <Features />
+      </div>
     </>
   )
 }

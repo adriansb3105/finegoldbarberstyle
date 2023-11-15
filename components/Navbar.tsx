@@ -55,9 +55,15 @@ export default function Navbar() {
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
+            fontWeight={700}
             color={useColorModeValue('gray.800', 'white')}>
-              <Link href="/">
-                Logo
+              <Link
+                href="/"
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'gold'
+                }}>
+                Fine Gold Barber Style
               </Link>
           </Text>
 
