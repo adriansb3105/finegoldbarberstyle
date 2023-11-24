@@ -25,7 +25,9 @@ import {
   MdLocationOn,
   MdFacebook,
   MdOutlineEmail,
+  MdOutlinePhone,
 } from 'react-icons/md'
+import { FaFacebook } from "react-icons/fa";
 import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs'
 
 export default function Contact() {
@@ -42,10 +44,9 @@ export default function Contact() {
             <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
                 <Box>
-                  <Heading>Contact</Heading>
+                  <Heading>Contacto</Heading>
                   <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
-                    Fill up the form below to contact
-                  </Text>
+                    Complete el siguiente formulario</Text>
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                     <VStack pl={0} spacing={3} alignItems="flex-start">
                       <Button
@@ -56,17 +57,17 @@ export default function Contact() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdPhone color="#1970F1" size="20px" />}>
-                        +91-988888888
+                        +506 8942 7629
                       </Button>
                       <Button
                         size="md"
                         height="48px"
-                        width="200px"
+                        width="250px"
                         variant="ghost"
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdEmail color="#1970F1" size="20px" />}>
-                        hello@abc.com
+                        rafaelserranobrenes22@gmail.com
                       </Button>
                       <Button
                         size="md"
@@ -76,40 +77,10 @@ export default function Contact() {
                         color="#DCE2FF"
                         _hover={{ border: '2px solid #1C6FEB' }}
                         leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
-                        Karnavati, India
+                        Tejar, Cartago
                       </Button>
                     </VStack>
                   </Box>
-                  <HStack
-                    mt={{ lg: 10, md: 10 }}
-                    spacing={5}
-                    px={5}
-                    alignItems="flex-start">
-                    <IconButton
-                      aria-label="facebook"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
-                      _hover={{ bg: '#0D74FF' }}
-                      icon={<MdFacebook size="28px" />}
-                    />
-                    <IconButton
-                      aria-label="github"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
-                      _hover={{ bg: '#0D74FF' }}
-                      icon={<BsGithub size="28px" />}
-                    />
-                    <IconButton
-                      aria-label="discord"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
-                      _hover={{ bg: '#0D74FF' }}
-                      icon={<BsDiscord size="28px" />}
-                    />
-                  </HStack>
                 </Box>
               </WrapItem>
               <WrapItem>
@@ -117,7 +88,7 @@ export default function Contact() {
                   <Box m={8} color="#0B0E3F">
                     <VStack spacing={5}>
                       <FormControl id="name">
-                        <FormLabel>Your Name</FormLabel>
+                        <FormLabel>Su Nombre</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
                           <InputLeftElement pointerEvents="none">
                             <BsPerson color="gray.800" />
@@ -125,29 +96,33 @@ export default function Contact() {
                           <Input type="text" size="md" />
                         </InputGroup>
                       </FormControl>
-                      <FormControl id="name">
-                        <FormLabel>Mail</FormLabel>
+                      <FormControl id="phone">
+                        <FormLabel>Teléfono</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
                           <InputLeftElement pointerEvents="none">
-                            <MdOutlineEmail color="gray.800" />
+                            <MdOutlinePhone color="gray.800" />
                           </InputLeftElement>
-                          <Input type="text" size="md" />
+                          <Input type="text" inputMode="numeric" pattern="\d*" size="md" />
                         </InputGroup>
                       </FormControl>
-                      <FormControl id="name">
-                        <FormLabel>Message</FormLabel>
+                      <FormControl id="message">
+                        <FormLabel>Mensaje</FormLabel>
                         <Textarea
                           borderColor="gray.300"
                           _hover={{
                             borderRadius: 'gray.300',
                           }}
-                          placeholder="message"
+                          placeholder="Mensaje"
                         />
                       </FormControl>
-                      <FormControl id="name" float="right">
-                        <Button variant="solid" bg="#0D74FF" color="white" _hover={{}}>
-                          Send Message
-                        </Button>
+                      <FormControl id="send" float="right">
+                      
+
+  <Button colorScheme='facebook' leftIcon={<FaFacebook />}>
+    Facebook
+  </Button>
+
+
                       </FormControl>
                     </VStack>
                   </Box>

@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { ReactNode } from 'react'
 
 const Logo = (props: any) => {
@@ -45,6 +45,7 @@ const SocialButton = ({
       cursor={'pointer'}
       as={'a'}
       href={href}
+      target='_blank'
       display={'inline-flex'}
       alignItems={'center'}
       justifyContent={'center'}
@@ -74,11 +75,11 @@ export default function Footer() {
         <Logo />
         <Text>© 2023 Fine Gold Barber Style. Todos los derechos reservados</Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-            <FaTwitter />
+        <SocialButton label={'TikTok'} href={'#'}>
+            <FaTiktok />
           </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
+          <SocialButton label={'Facebook'} href={'https://facebook.com/FineGoldBarberStyleBarberia'}>
+            <FaFacebook />
           </SocialButton>
           <SocialButton label={'Instagram'} href={'#'}>
             <FaInstagram />
